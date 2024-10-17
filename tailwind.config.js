@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-require-imports */
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -15,9 +14,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require('daisyui'),],
-  daisyui: {
-    themes: ["fantasy", "aqua"],
-  },
+  plugins: [require('daisyui')],
 };
 export default config;
