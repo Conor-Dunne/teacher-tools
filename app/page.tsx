@@ -1,6 +1,6 @@
 import { TfiTimer } from "react-icons/tfi";
 import { GiInvertedDice6 } from "react-icons/gi";
-import { MdOutlineScoreboard } from "react-icons/md";
+import { PiSpinnerDuotone } from "react-icons/pi";
 import ToolCard from "./components/toolCard";
 
 export default function Home() {
@@ -19,10 +19,10 @@ export default function Home() {
         href={"/dice"}
       />
        <ToolCard
-        heading={"Score Board"}
-        desc={"Coming soon!"}
-        Icon={MdOutlineScoreboard}
-        href={"/scoreboard"}
+        heading={"Number Wheel"}
+        desc={"Let's Spin!"}
+        Icon={PiSpinnerDuotone}
+        href={"/roulette"}
       />
     </div>
   );

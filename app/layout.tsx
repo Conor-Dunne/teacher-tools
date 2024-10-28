@@ -36,12 +36,12 @@ export default function RootLayout({
     </Link>
   </div>
   <div className="flex-none">
-    <ul className="menu menu-horizontal px-1">
+    {/* <ul className="menu menu-horizontal px-1">
       <li><a>Link</a></li>
       <li><a>Link</a></li>
       <li><a>Link</a></li>
       <li><a>Link</a></li>
-    </ul>
+    </ul> */}
   </div>
 </div>
         {children}
