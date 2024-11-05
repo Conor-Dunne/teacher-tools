@@ -2,7 +2,7 @@
 
 import { jsPDF } from 'jspdf';
 import React, { useState, useRef, useEffect } from 'react';
-import { Eraser, Pencil, Undo2, Redo2, RefreshCw, Type, Download, Move } from 'lucide-react';
+import { Eraser, Pencil, Undo2, Redo2, RefreshCw, Type, } from 'lucide-react';
 
 const Whiteboard = () => {
   const canvasRef = useRef(null);
@@ -12,7 +12,7 @@ const Whiteboard = () => {
   const [history, setHistory] = useState([]);
   const [historyStep, setHistoryStep] = useState(-1);
   const [textBoxes, setTextBoxes] = useState([]);
-  const [isAddingText, setIsAddingText] = useState(false);
+  // const [isAddingText, setIsAddingText] = useState(false);
   const [selectedTextBox, setSelectedTextBox] = useState(null);
   const [fontSize, setFontSize] = useState(16);
   
@@ -173,7 +173,7 @@ const Whiteboard = () => {
 
   const exportCanvas = (format) => {
     const canvas = canvasRef.current;
-    const context = canvas.getContext('2d');
+    // const context = canvas.getContext('2d');
     
     // Create a temporary canvas to include text boxes
     const tempCanvas = document.createElement('canvas');
