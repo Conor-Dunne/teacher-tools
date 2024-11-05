@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ToolCard({ heading, desc, Icon, href }) {
   return (
     <Link href={href}>
-      <div className="card bg-base-100 w-96 shadow-xl">
+      <div className="card bg-base-100 shadow-xl border border-gray-200">
         <figure className="px-10 pt-10">
           <Icon className="text-9xl" /> 
         </figure>
