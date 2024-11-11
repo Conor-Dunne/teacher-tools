@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import dynamic from 'next/dynamic';
 
 const Wheel = dynamic(() => import('react-custom-roulette').then((mod) => mod.Wheel), { ssr: false, });
@@ -9,12 +9,32 @@ export default function Roulette () {
   const [prizeNumber, setPrizeNumber] = useState(0);
   const [inputValue, setInputValue] = useState(4)
   const [displayedValue, setDisplayedValue] = useState(4);
+  // const [playSpinSound, setPlaySpinSound] = useState(false);
+
+  
+  const drumRoll = useRef(new Audio('/sounds/drum-roll.mp3'));
+  drumRoll.current.loop = true;
+
+  const cymbal = useRef(new Audio('/sounds/cymbal.mp3'))
+
+  const playDrumRoll = () => {
+    drumRoll.current.play();
+  };
+
+  const stopDrumRoll = () => {
+    drumRoll.current.pause()
+  }
+
+  const playCymbal = () => {
+    cymbal.current.play()
+  }
 
   const handleSpinClick = () => {
     if (!mustSpin) {
       const newPrizeNumber = Math.floor(Math.random() * data.length);
       setPrizeNumber(newPrizeNumber);
       setMustSpin(true);
+      playDrumRoll();
     }
   }
 
@@ -60,14 +80,17 @@ export default function Roulette () {
         mustStartSpinning={mustSpin}
         prizeNumber={prizeNumber}
         data={data}
-        spinDuration={0.35}
-        outerBorderWidth={1}
+        spinDuration={1}
+        outerBorderWidth={0}
+        innerBorderWidth={0}
+        innerRadius={0}
         textDistance={90}
         fontSize={15}
         radiusLineWidth={1}
-
         onStopSpinning={() => {
           setMustSpin(false);
+          stopDrumRoll();
+          playCymbal()
         }}
       />
       <button onClick={handleSpinClick} className=' bg-green-700 text-white p-4 rounded-md'>SPIN</button>
