@@ -115,7 +115,7 @@ export default function Roulette() {
       {/* You can open the modal using document.getElementById('ID').showModal() method */}
 {/* <button className="btn" onClick={()=>document.getElementById('my_modal_3').showModal()}>open modal</button> */}
 <dialog id="my_modal_3" className="modal">
-  <div className="modal-box flex flex-col items-center justify-between h-3/5">
+  <div className="modal-box flex flex-col items-center justify-center h-3/5">
     <form method="dialog">
       {/* if there is a button in form, it will close the modal */}
       <button 
