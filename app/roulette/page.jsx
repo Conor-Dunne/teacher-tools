@@ -15,7 +15,7 @@ export default function Roulette() {
   const [displayedValue, setDisplayedValue] = useState(4);
   const [confetti, setConfetti] = useState(false);
   const [result, setResult] = useState(null);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(generateOptions(4));
 
   const drumRoll = useRef(null);
   const cymbal = useRef(null);
