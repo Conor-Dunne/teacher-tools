@@ -48,14 +48,6 @@ export default function Timer() {
     return () => clearInterval(timer);
   }, [isRunning, timeLeft]);
 
-  const handleMinutesChange = (e) => {
-    setMinutes(parseInt(e.target.value));
-  };
-
-  const handleSecondsChange = (e) => {
-    setSeconds(parseInt(e.target.value));
-  };
-
   const handleStart = () => {
     if (timeLeft > 0) {
       setIsRunning(true);
