@@ -128,9 +128,9 @@ export default function Roulette() {
           onStopSpinning={() => {
             setMustSpin(false);
             stopDrumRoll();
-            playCymbal();
             setResult(data[prizeNumber]?.option);
             modalRef.current?.showModal();
+            playCymbal();
             setConfetti(true);
           }}
         />
