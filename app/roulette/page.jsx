@@ -123,7 +123,7 @@ export default function Roulette() {
           innerBorderWidth={0}
           innerRadius={0}
           textDistance={90}
-          fontSize={15}
+          fontSize={25}
           radiusLineWidth={1}
           onStopSpinning={() => {
             setMustSpin(false);
