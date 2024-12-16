@@ -118,7 +118,7 @@ export default function Roulette() {
           mustStartSpinning={mustSpin}
           prizeNumber={prizeNumber}
           data={data}
-          spinDuration={1}
+          spinDuration={0.9}
           outerBorderWidth={0}
           innerBorderWidth={0}
           innerRadius={0}
